@@ -1,0 +1,46 @@
+<h1>Listing Users</h1>
+
+<table class="qgg-table">
+  <thead>
+    <tr>
+      <th>编号</th>
+      <!--<th>Address</th>-->
+      <th>Arti person</th>
+      <th>Arti phone</th>
+      <!--<th>Bank</th>-->
+      <th>Busi name</th>
+      <!--<th>Busi type</th>-->
+      <!--<th>Cert code</th>-->
+      <!--<th>Cust</th>-->
+      <!--<th>Deposit bank</th>-->
+      <!--<th>Email</th>-->
+      <!--<th>Fax</th>-->
+      <th>Link mane</th>
+      <th>Link phone</th>
+      <!--<th>Manage type</th>-->
+      <!--<th>Phone</th>-->
+    </tr>
+  </thead>
+  <tbody>
+<%= for user <- @users do %>
+    <tr>
+      <td><%= dizeng(@pid) %></td>
+      <!--<td><%= user.address %></td>-->
+      <td><%= user.arti_person %></td>
+      <td><%= user.arti_phone %></td>
+      <!--<td><%= user.bank_id %></td>-->
+      <td><%= user.busi_name %></td>
+      <!--<td><%= user.busi_type %></td>-->
+      <!--<td><%= user.cert_code %></td>-->
+      <!--<td><%= user.cust_id %></td>-->
+      <!--<td><%= user.deposit_bank %></td>-->
+      <!--<td><%= user.email %></td>-->
+      <!--<td><%= user.fax %></td>-->
+      <td><%= user.link_mane %></td>
+      <td><%= user.link_phone %></td>
+      <!--<td><%= user.manage_type %></td>-->
+      <!--<td><%= user.phone %></td>-->
+    </tr>
+<% end %>
+  </tbody>
+</table>

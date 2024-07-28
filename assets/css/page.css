@@ -1,0 +1,47 @@
+#page {
+  form {
+    font-size: 20px;
+    margin: 0 0 30px 0;
+    table {
+      margin: auto;
+      tr td a {
+        vertical-align: sub;
+      }
+    }
+  }
+  header {
+    border-radius: 8px;
+    box-shadow: #666 0px 0px 10px;
+    background: rgb(245, 245, 245, 0.9);
+    margin: auto;
+    width: 820px;
+    nav {
+      text-align: center;
+      font-size: 25px;
+      a {
+        margin: 12px 0;
+        text-align: left;
+        display: inline-block;
+        width: 130px;
+        text-decoration: none;
+      }
+      a:link {
+        color: green;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: #ff00ff;
+      }
+      a:active {
+        color: blue;
+      }
+    }
+    #a_red,
+    #q_red,
+    #w_red {
+      color: red;
+    }
+  }
+}

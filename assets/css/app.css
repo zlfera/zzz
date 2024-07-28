@@ -1,0 +1,88 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./page.css";
+/* This file is for your main application CSS */
+* {
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "myFont";
+    src: url("https://www.youmile.vip/ziti.woff2") format("woff2");
+  }
+  body{
+    /*font-family: "myFont";*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  main{
+    font-family: "myFont";
+    opacity: 0.8;
+    margin: 130px 20px 0 20px;
+    #ali {
+      text-align: center;
+      a {
+        font-size: 25px;
+        color: red;
+        text-decoration: none;
+      }
+    }
+    section {
+      margin: 20px 0 0 0;
+      p {
+        margin: auto;
+        width: 300px;
+        font-size: 15px;
+        small {
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+  }
+  footer {
+    p {
+      text-align: center;
+      font-size: 20px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .qgg-table{
+      border-collapse: collapse;
+      width:100%;
+      border:1px solid #c6c6c6 !important;
+      margin-bottom:20px;
+  }
+  .qgg-table th{
+      border-collapse: collapse;
+      border-right:1px solid #c6c6c6 !important;
+      border-bottom:1px solid #c6c6c6 !important;
+      background-color:#ddeeff !important; 
+      padding:5px 9px;
+      font-size:14px;
+      font-weight:normal;
+      text-align:center;
+  }
+  .qgg-table td{
+      border-collapse: collapse;
+      border-right:1px solid #c6c6c6 !important;
+      border-bottom:1px solid #c6c6c6 !important; 
+      padding:5px 9px;
+      font-size:12px;
+      font-weight:normal;
+      text-align:center;
+      word-break: break-all;
+  }
+  .qgg-table tr:nth-child(odd){
+      background-color:#fff !important; 
+  }
+  .qgg-table tr:nth-child(even){
+      background-color: #f8f8f8 !important;
+    }
+  div form div {
+    margin-bottom: 10px;
+  }
+  

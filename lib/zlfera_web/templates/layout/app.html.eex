@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>黄梅县长虹米厂</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <!--<script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+<script type="text/javascript">
+   $youziku.load("body", "e45dd28bfe694cef92959676e7309d53", "stfzjjgangbikaishu");
+   /*$youziku.load("#id1,.class1,h1", "e45dd28bfe694cef92959676e7309d53", "stfzjjgangbikaishu");*/
+   /*．．．*/
+   $youziku.draw();
+</script> -->
+  </head>
+  <body style="background-image: url(/background_image.jpg)">
+    <main role="main" class="container"> 
+      <!--<div id="ali">
+        <a href="https://www.youmile.vip/index">点击进入长虹米厂官网</a>
+      </div>-->
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+      <section>
+        <p><%= get_text()["content"] %><small>--<%= get_text()["text_authors"] %></small></p>
+      </section>
+    </main>
+    <footer>
+      <p>copyright <a href="https://www.youmile.vip/index" target="_blank"></a> <%= DateTime.utc_now.year %></p>
+    </footer>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script type="text/javascript" src="//js.users.51.la/19821413.js"></script>
+  </body>
+  </html>
