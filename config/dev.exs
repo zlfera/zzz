@@ -25,8 +25,8 @@ config :zlfera, ZlferaWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "OtP+lR/W8fxiyrKeqqXIm4y7AboWzbgcxjIyHy+CPPCCtmU7qshTMi3/C/t181oS",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    # tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
