@@ -1,7 +1,7 @@
-@import "tailwindcss/base";
+/*@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "./page.css";
+@import "./page.css";*/
 /* This file is for your main application CSS */
 * {
     box-sizing: border-box;
