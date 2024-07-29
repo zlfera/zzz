@@ -1,5 +1,5 @@
 #page {
-  
+
   & form {
     font-size: 20px;
     margin: 0 0 30px 0;
@@ -19,7 +19,7 @@
     & nav {
       text-align: center;
       font-size: 25px;
-      &a {
+      & a {
         margin: 12px 0;
         text-align: left;
         display: inline-block;
