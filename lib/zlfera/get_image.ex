@@ -28,7 +28,8 @@ defmodule Zlfera.GetImage do
       )
 
     [h | _] = Jason.decode!(~s(#{res.body}))["data"]
-    Jason.encode!(h)
+    # Jason.encode!(h)
+    h
   end
 
   def n do
