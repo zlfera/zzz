@@ -1,40 +1,40 @@
 #page {
-  form {
+  & form {
     font-size: 20px;
     margin: 0 0 30px 0;
-    table {
+    & table {
       margin: auto;
-      tr td a {
+      & tr td a {
         vertical-align: sub;
       }
     }
   }
-  header {
+  & header {
     border-radius: 8px;
     box-shadow: #666 0px 0px 10px;
     background: rgb(245, 245, 245, 0.9);
     margin: auto;
     width: 820px;
-    nav {
+    & nav {
       text-align: center;
       font-size: 25px;
-      a {
+      &a {
         margin: 12px 0;
         text-align: left;
         display: inline-block;
         width: 130px;
         text-decoration: none;
       }
-      a:link {
+      & a:link {
         color: green;
       }
-      a:visited {
+      & a:visited {
         color: black;
       }
-      a:hover {
+      & a:hover {
         color: #ff00ff;
       }
-      a:active {
+      & a:active {
         color: blue;
       }
     }

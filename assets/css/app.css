@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "./page.css";
+@import "page.css";
 /* This file is for your main application CSS */
 * {
     box-sizing: border-box;
@@ -20,32 +20,32 @@
     font-family: "myFont";
     opacity: 0.8;
     margin: 130px 20px 0 20px;
-    #ali {
+    & #ali {
       text-align: center;
-      a {
+      & a {
         font-size: 25px;
         color: red;
         text-decoration: none;
       }
     }
-    section {
+    & section {
       margin: 20px 0 0 0;
-      p {
+      & p {
         margin: auto;
         width: 300px;
         font-size: 15px;
-        small {
+        & small {
           display: block;
           text-align: right;
         }
       }
     }
   }
-  footer {
-    p {
+  & footer {
+    & p {
       text-align: center;
       font-size: 20px;
-      a {
+      & a {
         text-decoration: none;
       }
     }
