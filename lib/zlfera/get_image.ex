@@ -5,6 +5,7 @@ defmodule Zlfera.GetImage do
     # # url = url["images"] |> List.first()
     # "http://s.cn.bing.net" <> url["url"]
     b = HTTPoison.get!("https://touduyu.com").body
+    {:ok, b} = Floki.parse_document(b)
     [url] = Floki.attribute(b, "body", "style")
     url
   end
@@ -12,8 +13,8 @@ defmodule Zlfera.GetImage do
   def get_text do
     url = "http://m.wufazhuce.com/one/" |> HTTPoison.get!()
     [_, _, _, _, {_, cookie}, _, _, _] = url.headers
-
-    body = url.body |> Floki.find("div .ui-content script")
+    {:ok, html} = Floki.parse_document(url.body)
+    body = html |> Floki.find("div .ui-content script")
     [{_, _, [token]}] = body
     [_, token] = Regex.split(~r{= '}, token)
     [token, _] = ~r{';} |> Regex.split(token)
