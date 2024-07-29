@@ -38,6 +38,6 @@ defmodule Zlfera.GetImage do
     image = HTTPoison.get!(i, recv_timeout: 10000).body
     File.write("./priv/static/background_image.jpeg", image)
     # html = HTTPoison.get!("www.youmile.vip/", recv_timeout: 10000).body
-    File.write("./priv/static/index.html", get_text())
+    # File.write("./priv/static/index.html", get_text())
   end
 end
