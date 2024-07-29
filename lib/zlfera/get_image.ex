@@ -11,7 +11,7 @@ defmodule Zlfera.GetImage do
 
   def get_text do
     url = "http://m.wufazhuce.com/one/" |> HTTPoison.get!()
-    [_, _, _, _, _, _, {_, cookie}, _, _, _] = url.headers
+    [_, _, _, _, {_, cookie}, _, _, _] = url.headers
     body = url.body |> Floki.find("div .ui-content script")
     [{_, _, [token]}] = body
     [_, token] = Regex.split(~r{= '}, token)
@@ -33,7 +33,7 @@ defmodule Zlfera.GetImage do
     [_, i] = Regex.split(~r{\(}, get_img())
     [i, _] = Regex.split(~r{\)}, i)
     image = HTTPoison.get!(i, recv_timeout: 10000).body
-    File.write("./priv/static/background_image.jpg", image)
+    File.write("./priv/static/background_image.jpeg", image)
     # html = HTTPoison.get!("www.youmile.vip/", recv_timeout: 10000).body
     File.write("./priv/static/index.html", get_text())
   end
