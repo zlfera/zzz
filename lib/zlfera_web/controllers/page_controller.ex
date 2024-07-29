@@ -4,7 +4,7 @@ defmodule ZlferaWeb.PageController do
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :home, layout: false)
+    render(conn, :home)
   end
 
   def index(conn, _params) do
@@ -27,7 +27,7 @@ defmodule ZlferaWeb.PageController do
     if etag in get_req_header(conn, "if-none-match") do
       conn |> send_resp(304, "")
     else
-      conn |> render("index.html")
+      conn |> render(:index)
     end
   end
 end
