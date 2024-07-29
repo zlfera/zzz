@@ -27,7 +27,7 @@ defmodule ZlferaWeb.PageController do
     if etag in get_req_header(conn, "if-none-match") do
       conn |> send_resp(304, "")
     else
-      conn |> render(:index)
+      conn |> render(:index, layout: false)
     end
   end
 end
