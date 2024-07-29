@@ -12,6 +12,7 @@ defmodule Zlfera.GetImage do
   def get_text do
     url = "http://m.wufazhuce.com/one/" |> HTTPoison.get!()
     [_, _, _, _, {_, cookie}, _, _, _] = url.headers
+
     body = url.body |> Floki.find("div .ui-content script")
     [{_, _, [token]}] = body
     [_, token] = Regex.split(~r{= '}, token)
@@ -26,7 +27,8 @@ defmodule Zlfera.GetImage do
       )
 
     [h | _] = Jason.decode!(~s(#{res.body}))["data"]
-    Jason.encode!(h)
+    # Jason.encode!(h)
+    h
   end
 
   def n do
