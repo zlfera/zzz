@@ -4,7 +4,7 @@ defmodule Zlfera.Tasks do
 
   def run do
     {:ok, _} = Application.ensure_all_started(:zlfera)
-    url1 = "http://220.248.203.59:8686/rtp/data/race/getAllRaceMarketing.jsp"
+    url1 = "http://1.202.34.227:9998/rtp/data/race/getAllRaceMarketing.jsp"
     url2 = "http://220.248.203.59:8686/rtp/data/race/getRaceMeeting.jsp?id="
     url3 = "http://220.248.203.59:8686/rtp/data/race/getRaceTacheDetail.jsp?id="
 

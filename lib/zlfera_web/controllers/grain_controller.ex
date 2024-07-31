@@ -16,6 +16,6 @@ defmodule ZlferaWeb.GrainController do
       end
 
     {:ok, pid} = Agent.start_link(fn -> 0 end)
-    render(conn, "index.html", grains: grains, pid: pid)
+    render(conn, :index, grains: grains, pid: pid)
   end
 end

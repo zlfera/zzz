@@ -3,10 +3,10 @@ defmodule Zlfera.TaskGrain do
   alias Zlfera.Repo
 
   def a(dqqq, yy) do
-    u = "http://59.55.120.113:8311/web/bidPriceSpecialWatch?specialNo=#{dqqq}&specialName=z"
+    u = "http://1.202.34.227:9998/web/bidPriceSpecialWatch?specialNo=#{dqqq}&specialName=z"
 
-    uu = "http://59.55.120.113:8311/trade/biddingAbout/tradeRequestListWatch"
-    uuu = "http://59.55.120.113:8311/trade/biddingAbout/tradeRequestListTotalWatch"
+    uu = "http://1.202.34.227:9998/trade/biddingAbout/tradeRequestListWatch"
+    uuu = "http://1.202.34.227:9998/trade/biddingAbout/tradeRequestListTotalWatch"
     headers = [referer: u]
     options = [params: [specialNo: dqqq]]
     {o, url} = HTTPoison.post(uuu, "", headers, options)
