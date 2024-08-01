@@ -17,7 +17,7 @@ defmodule ZlferaWeb.PageController do
     # end
 
     e = Zlfera.GetImage.get_text()["content"]
-    etag = ~s[W/"#{e |> :erlang.phash2() |> Integer.to_string(16)}"]
+    etag = ~s[W/"#{"" |> :erlang.phash2() |> Integer.to_string(16)}"]
 
     conn =
       conn
