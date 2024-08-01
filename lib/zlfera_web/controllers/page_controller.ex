@@ -13,7 +13,7 @@ defmodule ZlferaWeb.PageController do
         # |> String.length()
         File.read!("./priv/static/images/background_image.jpeg")
       else
-        ""
+        File.read!("./priv/static/images/background_image.jpeg")
       end
 
     etag = ~s[W/"#{e |> :erlang.phash2() |> Integer.to_string(16)}"]
