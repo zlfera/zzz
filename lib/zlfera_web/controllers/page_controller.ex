@@ -9,8 +9,9 @@ defmodule ZlferaWeb.PageController do
 
   def index(conn, _params) do
     e =
-      if File.exists?("./priv/static/index.html") do
-        File.read!("./priv/static/index.html") |> String.length()
+      if File.exists?("./priv/static/images/background_image.jpeg") do
+        # |> String.length()
+        File.read!("./priv/static/images/background_image.jpeg")
       else
         ""
       end
