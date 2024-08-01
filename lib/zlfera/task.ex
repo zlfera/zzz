@@ -4,7 +4,7 @@ defmodule Zlfera.Task do
   import Ecto.Query
 
   def run() do
-    {:ok, _} = Application.ensure_all_started(:zz)
+    {:ok, _} = Application.ensure_all_started(:zlfera)
 
     u1(b())
   end
