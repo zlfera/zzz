@@ -8,13 +8,13 @@ defmodule ZlferaWeb.PageController do
   end
 
   def index(conn, _params) do
-    # e =
-    #  if File.exists?("./priv/static/images/background_image.jpeg") do
-    # |> String.length()
-    #   File.read!("./priv/static/images/background_image.jpeg")
-    # else
-    # ""
-    # end
+    e =
+      if File.exists?("./lib/zlfera-0.1.0/priv/static/images/background_image.jpeg") do
+        # |> String.length()
+        File.read!("./lib/zlfera-0.1.0/priv/static/images/background_image.jpeg")
+      else
+        ""
+      end
 
     e = Zlfera.GetImage.get_text()["content"]
     etag = ~s[W/"#{e |> :erlang.phash2() |> Integer.to_string(16)}"]
