@@ -64,7 +64,7 @@ config :phoenix, :json_library, Jason
 
 config :zlfera, Zlfera.Scheduler,
   jobs: [
-    # {"0 0-23/1 * * *", {Zlfera.GetImage, :n, []}},
+    {"0 0-23/1 * * *", {Zlfera.GetImage, :n, []}},
     {"0 4 * * *", {Zlfera.Task, :run, []}},
     {"5 4 * * *", {Zlfera.Task, :year, []}},
     {"0 1 * * *", {Zlfera.Task, :phone, []}}
