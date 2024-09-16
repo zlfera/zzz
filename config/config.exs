@@ -43,16 +43,16 @@ config :esbuild,
   ]
 
 # Configure tailwind (the version is required)
- config :tailwind,
- version: "3.3.2",
- default: [
- args: ~w(
+config :tailwind,
+  version: "3.3.2",
+  default: [
+    args: ~w(
   --config=tailwind.config.js
  --input=css/app.css
  --output=../priv/static/assets/app.css
  ),
- cd: Path.expand("../assets", __DIR__)
- ]
+    cd: Path.expand("../assets", __DIR__)
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -64,7 +64,7 @@ config :phoenix, :json_library, Jason
 
 config :zlfera, Zlfera.Scheduler,
   jobs: [
-    {"0 0-23/1 * * *", {Zlfera.GetImage, :n, []}},
+    # {"0 0-23/1 * * *", {Zlfera.GetImage, :n, []}},
     {"0 4 * * *", {Zlfera.Task, :run, []}},
     {"5 4 * * *", {Zlfera.Task, :year, []}},
     {"0 1 * * *", {Zlfera.Task, :phone, []}}
