@@ -70,7 +70,6 @@ config :zlfera, Zlfera.Scheduler,
     {"0 1 * * *", {Zlfera.Task, :phone, []}}
   ]
 
-# <%= Zlfera.GetImage.get_text()["content"] %><small>--<%= Zlfera.GetImage.get_text()["text_authors"] %></small>
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"

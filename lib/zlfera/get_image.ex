@@ -12,7 +12,7 @@ defmodule Zlfera.GetImage do
 
   def get_text do
     url = "http://m.wufazhuce.com/one/" |> HTTPoison.get!()
-    [_, _, _, _, {_, cookie}, _, _, _] = url.headers
+    [_, _, _, _, {_, cookie1}, _, {_, cookie2}, _, _, _] = url.headers
     {:ok, html} = Floki.parse_document(url.body)
     body = html |> Floki.find("div .ui-content script")
     [{_, _, [token]}] = body
@@ -24,7 +24,7 @@ defmodule Zlfera.GetImage do
         :post,
         "http://m.wufazhuce.com/one/ajaxlist/" <> "0" <> "?_token=" <> token,
         "",
-        [{"Cookie", cookie}]
+        [{"Cookie", cookie1 <> ";" <> cookie2}]
       )
 
     [h | _] = Jason.decode!(~s(#{res.body}))["data"]
